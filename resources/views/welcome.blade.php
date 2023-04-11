@@ -16,7 +16,37 @@
 </head>
 
 <body>
-    
+    <main>
+        <div class="container">
+            <h1>Film:</h1>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                @forelse ($movies as $movie)
+                    <div class="col-4">
+                        <div class="card">
+                            <h3>{{$movie->title}}</h3>
+                            <h5>{{$movie->original_title}}</h5>
+                            <p class="country">
+                                <strong>Country:</strong>
+                                {{$movie->nationality}}
+                            </p>
+                            <p class="relase">
+                                <strong>Uscito il:</strong>
+                                {{$movie->date}}
+                            </p>
+                            <p class="vote">
+                                <strong>Voto:</strong>
+                                {{$movie->vote}}
+                            </p>
+                        </div>
+                    </div>
+                @empty
+                @endforelse
+            </div>
+        </div>
+    </main>
 </body>
 
 </html>
