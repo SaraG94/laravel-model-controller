@@ -16,7 +16,7 @@
 </head>
 
 <body>
-    <h1>ho aggiunto il controller</h1>
+    
 </body>
 
 </html>
